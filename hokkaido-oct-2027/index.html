@@ -27,7 +27,18 @@ ul{padding-left:21px;margin:8px 0}.note{background:#fff8e9;border-left:4px solid
 footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
 @media(max-width:600px){header{padding:40px 0 32px}.card{padding:17px}table{font-size:.87rem}th,td{padding:7px 5px}}
 @media print{body{background:white}.card{box-shadow:none;break-inside:avoid}header{background:#315d55!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
-</style>
+
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0}
+.photo{margin:0;background:#f7f9f8;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.photo img{display:block;width:100%;height:170px;object-fit:cover}
+.photo figcaption{padding:10px 12px;font-size:.9rem}
+.photo figcaption small{display:block;color:var(--muted);margin-top:3px}
+.map-frame{width:100%;height:360px;border:0;border-radius:14px;background:#eef2ef}
+.map-link{display:inline-block;margin:10px 8px 0 0;padding:8px 12px;border-radius:9px;background:var(--pale);color:#315d55;text-decoration:none;font-weight:650}
+.day-photos{margin:14px 0 4px}
+@media(max-width:600px){.map-frame{height:290px}.photo img{height:155px}}
+
+.guide-card{background:#fff;border:1px solid var(--line,#dce5e1);border-radius:18px;padding:20px;margin:18px 0;box-shadow:0 5px 18px #18333b08}.flight-grid,.place-grid,.expense-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.flight-box,.expense-box,.place-card{background:#f7faf8;border:1px solid #e1e9e4;border-radius:13px;padding:14px}.flight-box strong,.expense-box strong{display:block}.map-frame{width:100%;height:350px;border:0;border-radius:14px;background:#eef2ef}.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}.photo{margin:0;background:#f7f9f8;border:1px solid #e1e9e4;border-radius:13px;overflow:hidden}.photo img{display:block;width:100%;height:135px;object-fit:cover}.photo figcaption{padding:8px 10px;font-size:13px}.place-card p{font-size:13px;color:#64757c;margin:6px 0 0}.expense-box .amount{font-size:1.35rem;font-weight:800;color:#286b5b}.small-note{font-size:12px;color:#687783}@media(max-width:600px){.map-frame{height:275px}.photo img{height:125px}}</style>
 </head>
 <body>
 <header>
@@ -47,6 +58,20 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  </div>
  <h3>Driving route</h3>
  <div class="route"><span>New Chitose</span><b>→</b><span>Lake Toya</span><b>→</b><span>Hakodate</span><b>→</b><span>Onuma</span><b>→</b><span>Jozankei</span><b>→</b><span>Sapporo</span><b>→</b><span>CTS</span></div>
+
+ <h3>แผนที่เส้นทางทั้งทริป</h3>
+ <p class="muted">แผนที่แสดงเส้นทางหลักสำหรับขับรถ สามารถเปิด Google Maps เพื่อดูเส้นทางและปรับจุดแวะได้</p>
+ <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+   src="https://www.google.com/maps?output=embed&amp;saddr=New+Chitose+Airport,+Hokkaido&amp;daddr=Lake+Toya,+Hokkaido+to:Hakodate,+Hokkaido+to:Onuma+Quasi-National+Park,+Hokkaido+to:Jozankei+Onsen,+Hokkaido+to:Sapporo,+Hokkaido+to:New+Chitose+Airport,+Hokkaido"
+   title="Hokkaido road trip route map"></iframe>
+ <a class="map-link" href="https://www.google.com/maps/dir/New+Chitose+Airport/Lake+Toya/Hakodate/Onuma+Quasi-National+Park/Jozankei+Onsen/Sapporo/New+Chitose+Airport/" target="_blank" rel="noopener">เปิดเส้นทางทั้งหมดใน Google Maps ↗</a>
+ <div class="photo-grid">
+  <figure class="photo"><img loading="lazy" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c8/52/98/caption.jpg?h=600&amp;s=1&amp;w=1000" alt="วิว Lake Toya จาก Silo Observatory"><figcaption><strong>Lake Toya</strong><small>วิวทะเลสาบจาก Silo Observatory · ภาพจาก TripAdvisor</small></figcaption></figure>
+  <figure class="photo"><img loading="lazy" src="https://ak-d.tripcdn.com/images/1mi4i224x8xd47wui4449.jpg?proc=source%2Ftrip" alt="สะพานแดง Futami Tsuribashi ใน Jozankei"><figcaption><strong>Jozankei</strong><small>Futami Tsuribashi · ภาพจาก Trip.com</small></figcaption></figure>
+  <figure class="photo"><img loading="lazy" src="https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=review&amp;file_name=608%2F201908%2F78421093b1bf69b70b750ad9a523ad80.jpg&amp;w=800" alt="วิวใบไม้เปลี่ยนสีที่ Onuma Park"><figcaption><strong>Onuma Park</strong><small>ทะเลสาบ สะพาน และวิว Mt. Komagatake · ภาพจาก Travelko</small></figcaption></figure>
+  <figure class="photo"><img loading="lazy" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/458000/458186-Sapporo-And-Vicinity.jpg" alt="อาคารย่าน JR Tower และแหล่งช้อปปิ้ง Sapporo"><figcaption><strong>Sapporo</strong><small>ย่าน JR Tower / Stellar Place · ภาพจาก Expedia</small></figcaption></figure>
+ </div>
+
 </section>
 <section class="card">
  <h2>โรงแรม 5 คืน</h2>
@@ -64,6 +89,7 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  <div class="day">
   <div class="dayhead"><h2>Day 1 · Saturday, 16 October</h2><span class="stay">พัก Lake Toya</span></div>
   <h3>New Chitose Airport → Lake Toya</h3>
+  <div class="photo-grid day-photos"><figure class="photo"><img loading="lazy" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c8/52/98/caption.jpg?h=600&amp;s=1&amp;w=1000" alt="Lake Toya viewpoint"><figcaption><strong>Silo Observatory</strong><small>จุดชมวิว Lake Toya</small></figcaption></figure></div>
   <table><tr><th>เวลา</th><th>กิจกรรม</th></tr>
   <tr><td>11:05</td><td>ถึง New Chitose Airport (CTS)</td></tr>
   <tr><td>11:05–12:30</td><td>ผ่าน ตม. รับกระเป๋าและรับรถเช่า</td></tr>
@@ -76,6 +102,7 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  <div class="day">
   <div class="dayhead"><h2>Day 2 · Sunday, 17 October</h2><span class="stay">พัก Hakodate</span></div>
   <h3>Lake Toya → Hakodate</h3>
+  <div class="photo-grid day-photos"><figure class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Hakodate waterfront" onerror="this.style.display='none'"><figcaption><strong>Hakodate Bay Area</strong><small>ตลาดเช้า โกดังอิฐแดง และวิวอ่าว</small></figcaption></figure></div>
   <table><tr><th>เวลา</th><th>กิจกรรม</th></tr>
   <tr><td>07:00–08:00</td><td>อาหารเช้าและเช็กเอาต์</td></tr>
   <tr><td>08:30</td><td>ออกจาก Lake Toya</td></tr>
@@ -90,6 +117,7 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  <div class="day">
   <div class="dayhead"><h2>Day 3 · Monday, 18 October</h2><span class="stay">พัก Onuma</span></div>
   <h3>Hakodate → Onuma Nature & Dairy Farm Tour</h3>
+  <div class="photo-grid day-photos"><figure class="photo"><img loading="lazy" src="https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=review&amp;file_name=608%2F201908%2F78421093b1bf69b70b750ad9a523ad80.jpg&amp;w=800" alt="Onuma Park autumn scenery"><figcaption><strong>Onuma Quasi-National Park</strong><small>เดินเล่นชมทะเลสาบและภูเขา Komagatake</small></figcaption></figure></div>
   <p>วันนี้ไม่เที่ยว Hakodate เพิ่ม หลังอาหารเช้าออกเดินทางไป Onuma ทันที เน้นธรรมชาติ ฟาร์มชีส และผลิตภัณฑ์นมท้องถิ่น</p>
   <table><tr><th>เวลา</th><th>กิจกรรม</th></tr>
   <tr><td>07:00–08:00</td><td>อาหารเช้าที่โรงแรม</td></tr>
@@ -109,6 +137,7 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  <div class="day">
   <div class="dayhead"><h2>Day 4 · Tuesday, 19 October</h2><span class="stay">พัก Jozankei</span></div>
   <h3>Onuma → Jozankei</h3>
+  <div class="photo-grid day-photos"><figure class="photo"><img loading="lazy" src="https://ak-d.tripcdn.com/images/1mi4i224x8xd47wui4449.jpg?proc=source%2Ftrip" alt="Futami Suspension Bridge Jozankei"><figcaption><strong>Futami Tsuribashi</strong><small>สะพานแดงและบรรยากาศหุบเขา Jozankei</small></figcaption></figure></div>
   <table><tr><th>เวลา</th><th>กิจกรรม</th></tr>
   <tr><td>07:00–08:00</td><td>อาหารเช้าที่โรงแรม</td></tr>
   <tr><td>08:30</td><td>เช็กเอาต์และออกเดินทาง</td></tr>
@@ -124,6 +153,7 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
  <div class="day">
   <div class="dayhead"><h2>Day 5 · Wednesday, 20 October</h2><span class="stay">พัก Sapporo</span></div>
   <h3>Jozankei → Sapporo Shopping Day</h3>
+  <div class="photo-grid day-photos"><figure class="photo"><img loading="lazy" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/458000/458186-Sapporo-And-Vicinity.jpg" alt="JR Tower Sapporo shopping area"><figcaption><strong>JR Tower / Stellar Place</strong><small>ย่านช้อปปิ้งใกล้สถานี Sapporo</small></figcaption></figure></div>
   <p>เน้นรับประทานอาหารและช้อปปิ้งรอบ Sapporo Station โดยนำรถไปจอดที่โรงแรมก่อน แล้วเดินเที่ยวในย่านสถานี</p>
   <table><tr><th>เวลา</th><th>กิจกรรม</th></tr>
   <tr><td>07:00–08:00</td><td>อาหารเช้าที่ Jozankei View Hotel</td></tr>
